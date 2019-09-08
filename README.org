@@ -75,7 +75,9 @@ Due to parser errors (see [[https://github.com/diamond-lizard/iwd2mia/issues/1][
 ** Requirements
 *** Icewind Dale 2
 Tested only on version 2.1.0.13 of the [[https://www.gog.com/game/icewind_dale_2][GOG version of IWD2]]
+
 The xpcapper patch that's included here only works on this GOG version.
+
 If you have some other version of IWD2, you may need to comment out xpcapper in plays/iwd2mia.yaml
 *** Linux
 Tested on Gentoo Linux amd64 4.19.2-ck, but any Linux distro should work fine
@@ -83,21 +85,26 @@ Tested on Gentoo Linux amd64 4.19.2-ck, but any Linux distro should work fine
 Tested on Ansible version 2.7.8
 *** [[https://www.python.org/][Python]]
 Ansible depends on Python
+
 Tested on Python version 2.7.15, but any version that Ansible accepts should work fine
 *** [[https://www.winehq.org/][wine]]
 Tested on wine version 3.0.1 and 4.0.1
 *** [[http://www.daemonology.net/bsdiff/][bsdiff]]
 Used for binary patching of IWD2.exe for the xpcapper patch.
+
 But if you comment out the xpcapper patch in plays/iwd2mia.yaml you won't need bsdiff.
+
 Tested on bsdiff version 4.3-r3
 *** [[https://www.gnu.org/software/make/make.html][make]]
 Tested with GNU Make 4.2.1, but any make should work fine
 ** Disclaimer
 I've only tested this on my own machine.  Use it at your own risk!
+
 No warranties expressed or implied.
 ** Instructions
 *** Make a backup of your entire ~/.wine directory
 or wherever the disk you installed IWD2 to is.
+
 In case something goes wrong, use this backup to restore from.
 *** Download this package somewhere
 To do so, you can close this repo or download a zip file
@@ -108,8 +115,7 @@ To do so, you can close this repo or download a zip file
 *** Extract the zip file, if that's what you downloaded
 *** Edit ansible.cfg
 **** Change the value of "inventory" to be the path to the "inventory" directory.
-For instance, if you installed this package to ~/foo then the "inventory" line
-in ansible.cfg should read:
+For instance, if you installed this package to ~/foo then the "inventory" line in ansible.cfg should read:
 
 inventory = ~/foo/inventory
 *** Edit inventory/host_vars/localhost.yaml
