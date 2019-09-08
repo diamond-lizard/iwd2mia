@@ -37,6 +37,7 @@
 .PHONY: xpcapper
 
 all:
+	@echo Read README.org for installation instructions.
 
 ammo_belts_and_bottomless_bags:
 	ansible-playbook plays/ad-hoc-role-launcher.yaml -e 'role=ammo_belts_and_bottomless_bags'
