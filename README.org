@@ -124,6 +124,7 @@ inventory = ~/foo/inventory
 *** Type "make install" to install every mod that's not commented out in plays/iwd2mia.yaml
 *** Alternatively, to install just one particular mod type "make <modname>" (where "modname" is the name of the mod, as listed in the "roles" directory or in the Makefile)
 For example, "make xpcapper" or "make celestial_fury"
+*** Note: As mods are installed, their readme files are placed in to the "mod-readme" subdirectory under your IWD2 directory.
 ** License
 
 All of the Ansible code in this repo is distributed under the AGPL (see below).  The mods themselves are distributed under their own licenses.
