@@ -100,11 +100,12 @@ No warranties expressed or implied.
 or wherever the disk you installed IWD2 to is.
 In case something goes wrong, use this backup to restore from.
 *** Download this package somewhere
-To do so, you can close this repo or download a tar file
+To do so, you can close this repo or download a zip file
 **** To clone the repo
-***** TODO
-**** To download a tar file
-***** TODO
+***** git clone https://github.com/diamond-lizard/iwd2mia.git
+**** To download a zip file
+***** Download https://github.com/diamond-lizard/iwd2mia/archive/master.zip
+*** Extract the zip file, if that's what you downloaded
 *** Edit ansible.cfg
 **** Change the value of "inventory" to be the path to the "inventory" directory.
 For instance, if you installed this package to ~/foo then the "inventory" line
