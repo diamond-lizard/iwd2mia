@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: c02bc03d085df31e5847434d1a0a6d7bba7e7681a26e96352b5406bac250f9bc
+iwd2_mod_archive_file_path: "{{ role_path }}/files/ammunition-belt.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBQUIVC.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBQUIVC.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/ammunition-belt"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBQUIVC.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBQUIVC"
+  - "{{ iwd2_path }}/SETUP-BBQUIVC.DEBUG"
+  - "{{ iwd2_path }}/setup-BBQUIVC.exe"
+  - "{{ iwd2_path }}/setup-BBQUIVC.tp2"
+  - "{{ iwd2_path }}/README-BBQUIVC.txt"

@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 39a9766c73150f108b01afe7ce75aa62b6923e2b49445b595d1211de242b22fa
+iwd2_mod_archive_file_path: "{{ role_path }}/files/claw-of-meerclar.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBDAGCM.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBDAGCM.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/crate-of-planar-rest"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBDAGCM.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBDAGCM"
+  - "{{ iwd2_path }}/SETUP-BBDAGCM.DEBUG"
+  - "{{ iwd2_path }}/setup-BBDAGCM.exe"
+  - "{{ iwd2_path }}/setup-BBDAGCM.tp2"
+  - "{{ iwd2_path }}/README-BBDAGCM.txt"

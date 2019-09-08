@@ -1,0 +1,13 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 749733d33dda871842bc3d2ef9773a72d3c30f6180e1e823d03cab244df165d2
+iwd2_mod_archive_file_path: "{{ role_path }}/files/light-of-selune.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/Setup-LOS.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/LOS/Readme-LOS-v2.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/light-of-selune"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-LOS.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/LOS"
+  - "{{ iwd2_path }}/SETUP-LOS.DEBUG"
+  - "{{ iwd2_path }}/Setup-LOS.exe"
+  - "{{ iwd2_path }}/Setup-LOS.tp2"

@@ -1,0 +1,6 @@
+iwd2_exe_original_sha256: 18e01d21855f88702c062497aa25dfb42928671973d3b929e42206def2d9df2a
+iwd2_exe_xpcapper_bspatch: "{{ role_path }}/files/IWD2.exe.xpcapper.bspatch"
+iwd2_exe_xpcapper_bspatch_sha256: 00e1bbc43cec580a78cb71b56882fe635dc5d934b718cffbabcdda1269e6a4ba
+iwd2_exe_after_xpcapper_patch_sha256: 91955798e73a37c1ace2d9aa790de694ccdf9d5da829ebadbd5bb9edc23344aa
+iwd2_xpcapper_readme_file: "{{ role_path }}/files/readme.txt"
+iwd2_xpcapper_readme_dir: "{{ iwd2_mod_readme_dir }}/xpcapper"

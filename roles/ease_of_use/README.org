@@ -1,0 +1,23 @@
+* Ease of Use
+This ansible role installs the following components of the [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/Weimer-IWD2-Ease.rar][Ease of Use]] mod for Icewind Dale 2:
+
+ - 0 // Bugfixes
+ - 1 // Infinite Stacking
+ - 2 // Non-Combat War Chant of the Sith
+ - 3 // Improved Holy Avenger (Lawful: +2d6 vs. Chaos; Dispel On Hit, Will saves)
+ - 5 // No-Fists for Iron Body
+ - 6 // Deep Gnome Starting XP
+ - 7 // Improved Moonblades
+ - 8 // Improved Monk Fists
+ - 9 // Collector's Edition Bonus Items
+ - 11 // Magic Weapon Finesse
+ - 14 // Stronger Bastard Swords
+ - 16 // Non-Linear Teleportation
+ - 17 // Armor and Shields Provide Damage Resistance
+ - 18 // Include Forgotten Armor and Shields
+ - 19 // Additional Druid Spells
+ - 20 // Alternate Shapeshifting
+ - 21 // Skip Battle Square
+ - 23 // Faster Oswald
+
+This role uses version 246 of the Windows WEIDU installer.

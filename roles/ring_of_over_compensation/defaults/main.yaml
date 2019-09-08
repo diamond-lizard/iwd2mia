@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 58d13e8c1304fc638071f444d5564e22e05a6a7ab24776a04cbcd33ec6e019cb
+iwd2_mod_archive_file_path: "{{ role_path }}/files/ring-of-over-compensation.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBRNGOC.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBRNGOC.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/ring-of-over-compensation"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBRNGOC.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBRNGOC"
+  - "{{ iwd2_path }}/SETUP-BBRNGOC.DEBUG"
+  - "{{ iwd2_path }}/setup-BBRNGOC.exe"
+  - "{{ iwd2_path }}/setup-BBRNGOC.tp2"
+  - "{{ iwd2_path }}/README-BBRNGOC.txt"

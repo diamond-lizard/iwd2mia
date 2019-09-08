@@ -1,0 +1,4 @@
+iwd2_dest: "{{ iwd2_path }}"
+iwd2_ddraw_sha256: 2c20a7124acee1642426e35ebccc32a69397730e8457ca00ee4dd053b1197c7a
+iwd2_ddraw_path: "{{ role_path }}/files/ddraw.dll"
+iwd2_aqrit_path: "{{ role_path }}/files/aqrit.cfg"

@@ -1,0 +1,16 @@
+---
+- name: File exists
+  stat:
+    path: "{{ iwd2_file_path }}"
+    checksum_algorithm: sha256
+  register: iwd2_file
+  failed_when: iwd2_file.stat.exists == False
+
+- name: File's checksum is as expected
+  assert:
+    that: iwd2_file.stat.checksum == iwd2_file_sha256
+
+- name: File copied to destination
+  copy:
+    src: "{{ iwd2_file_path }}"
+    dest: "{{ iwd2_file_dest }}"

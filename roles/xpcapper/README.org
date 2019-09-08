@@ -1,0 +1,5 @@
+* Level 40 XP patcher
+This ansible role uses [[http://www.daemonology.net/bsdiff/][bspatch]] to patch the [[https://www.gog.com/game/icewind_dale_2][GOG version of IWD2]] with the patch in
+the [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/XPCapper.zip][Level 40 XP patcher]] mod for Icewind Dale 4
+** Note
+If you don't have some other IWD2 version or the patch fails or it's already been patches, simply comment out the xpcapper line in plays/iwd2mia.yaml

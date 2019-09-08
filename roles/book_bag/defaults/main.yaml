@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 27cf4e85359c61ebe602538ca3d235cd1839dde94342b50423297a605b8d3c83
+iwd2_mod_archive_file_path: "{{ role_path }}/files/book-bag.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBBKBG.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBBKBG.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/book-bag"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBBKBG.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBBKBG"
+  - "{{ iwd2_path }}/SETUP-BBBKBG.DEBUG"
+  - "{{ iwd2_path }}/setup-BBBKBG.exe"
+  - "{{ iwd2_path }}/setup-BBBKBG.tp2"
+  - "{{ iwd2_path }}/README-BBBKBG.txt"

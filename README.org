@@ -1,0 +1,138 @@
+* IWD2MIA - Icewind Dale 2 Mod Install via Ansible
+** Overview
+This package installs many Icewind Dale 2 mods using [[https://www.ansible.com/][Ansible]].
+** Comparisons to manual installation
+*** Advantages over manual installation:
+**** The mods it installs come bundled in with this package.
+So you don't have to hunt around the entire internet searching around for the mods you need to install.
+**** You don't have to read, understand, and manually follow the install instructions of dozens of different mods.
+**** Reinstalling from scratch is easy.
+**** Picking which mods you want and don't want is easy.
+*** Disadvantages over manual installation:
+**** You have to have Ansible and some other software installed.
+See the Requirements section below.
+**** You have to make a few manual edits to a couple of configuration files before the mod install will work.
+See the Instructions section below.
+** Which mods are installed
+*** Almost all of the mods listed in [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/IWD2-4dummies.zip][IWD2_4dummies]]
+**** [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/XPCapper.zip][Level 40 XP patcher]]
+**** [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/ExtendedTables40.zip][Level 40 extended tables]]
+**** MONCRATE.2DA from [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/IWD2-4dummies.zip][IWD2_4dummies]]
+**** [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/Weimer-Targos.rar][Undead Targos]] (and Tougher Torak, which comes with it)
+**** [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/Weimer-Merchant.rar][Bonus Merchant]]
+**** The following mods from [[https://bbellina.blogspot.com/2014/06/icewind-dale-ii-enhancements.html][Icewind Dale II Enhancements]]
+***** Celestial Fury
+***** Book Bag
+***** Cloak of Blending
+***** Crate of Planar Rest
+***** Claw of Meerclar
+***** Helm of Brilliance
+***** Helm of Dragon Scales
+***** Pocket Transmuter
+***** Quiver
+***** Bolt Quiver
+***** Ammunition Belt
+***** Bright Evening Star
+***** Ring of Natural Form
+***** Ring of Over Compensation
+***** Ring of Teleportation
+***** Rope of Entanglement
+***** Scimitar of the Arch-Druid
+***** Hellfire Sword
+***** Staff of the Archmagi
+***** Celestial Storm
+***** Needle
+**** [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/IWD2-ammobelt.zip][Ammo Belts and Bottomless Bags]]
+**** NOT "[[http://www.baldursgatemods.com/forums/index.php?topic=6803.0][IWD2 Tweaks]]"
+Because IWD2_4dummies brands it as being for "expert-only due to the amount of effort you must perform in order to get exactly what you want out of this one".
+**** [[http://america.iegmc.com/russian/IWD2_mods/CoMstore210.7z][Comstore]]
+**** [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/LightOfSelune.zip][Light of Selune]] is included but NOT installed
+Due to parser errors (see below)
+**** The following components of the [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/Weimer-IWD2-Ease.rar][Ease of Use]] mod:
+***** 0 // Bugfixes
+***** 1 // Infinite Stacking
+***** 2 // Non-Combat War Chant of the Sith
+***** 3 // Improved Holy Avenger (Lawful: +2d6 vs. Chaos; Dispel On Hit, Will saves)
+***** 5 // No-Fists for Iron Body
+***** 6 // Deep Gnome Starting XP
+***** 7 // Improved Moonblades
+***** 8 // Improved Monk Fists
+***** 9 // Collector's Edition Bonus Items
+***** 11 // Magic Weapon Finesse
+***** 14 // Stronger Bastard Swords
+***** 16 // Non-Linear Teleportation
+***** 17 // Armor and Shields Provide Damage Resistance
+***** 18 // Include Forgotten Armor and Shields
+***** 19 // Additional Druid Spells
+***** 20 // Alternate Shapeshifting
+***** 21 // Skip Battle Square
+***** 23 // Faster Oswald
+**** [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/Tactics4IWD2.rar][Tactics4IWD2]]
+**** 65MAXHP.BCS from [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/IWD2-4dummies.zip][IWD2_4dummies]]
+*** Also
+**** [[http://havredest.eklablog.fr/interfaces-pour-widescreen-a42876917][IWD2 GUI Fix v.1.04]] (an updated version of the IWD2 widescreen mod)
+**** The [[http://bitpatch.com/ddwrapper.html][ddwrapper]] fix
+** Requirements
+*** Icewind Dale 2
+Tested only on version 2.1.0.13 of the [[https://www.gog.com/game/icewind_dale_2][GOG version of IWD2]]
+The xpcapper patch that's included here only works on this GOG version.
+If you have some other version of IWD2, you may need to comment out xpcapper in plays/iwd2mia.yaml
+*** Linux
+Tested on Gentoo Linux amd64 4.19.2-ck, but any Linux distro should work fine
+*** [[http://www.daemonology.net/bsdiff/][Ansible]]
+Tested on Ansible version 2.7.8
+*** [[https://www.python.org/][Python]]
+Ansible depends on Python
+Tested on Python version 2.7.15, but any version that Ansible accepts should work fine
+*** [[https://www.winehq.org/][wine]]
+Tested on wine version 3.0.1 and 4.0.1
+*** [[http://www.daemonology.net/bsdiff/][bsdiff]]
+Used for binary patching of IWD2.exe for the xpcapper patch.
+But if you comment out the xpcapper patch in plays/iwd2mia.yaml you won't need bsdiff.
+Tested on bsdiff version 4.3-r3
+*** [[https://www.gnu.org/software/make/make.html][make]]
+Tested with GNU Make 4.2.1, but any make should work fine
+** Disclaimer
+I've only tested this on my own machine.  Use it at your own risk!
+No warranties expressed or implied.
+** Instructions
+*** Make a backup of your entire ~/.wine directory
+or wherever the disk you installed IWD2 to is.
+In case something goes wrong, use this backup to restore from.
+*** Download this package somewhere
+To do so, you can close this repo or download a tar file
+**** To clone the repo
+***** TODO
+**** To download a tar file
+***** TODO
+*** Edit ansible.cfg
+**** Change the value of "inventory" to be the path to the "inventory" directory.
+For instance, if you installed this package to ~/foo then the "inventory" line
+in ansible.cfg should read:
+
+inventory = ~/foo/inventory
+*** Edit inventory/host_vars/localhost.yaml
+**** Change iwd2_path_unexpanded to whatever directory you have IWD2 installed in
+**** Change horizontal_resolution and vertical_resolution to whatever resolution you want to play IWD2 at
+*** Type "make install"
+** Parser errors in Light of Selune
+The [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/LightOfSelune.zip][Light of Selune]] mod is included but NOT installed due to the following parser errors that WEIDU 246 reports:
+
+#+BEGIN_EXAMPLE
+  [trigger list near line 572, column 35 of los/dlg/f#bowyer.d] PARSE WARNING at
+line 572 column 1-19
+  Near Text: )
+  Type mismatch in "SeeDead" argument of [See].
+  Expecting type "integer".
+  WARNING: cannot verify trigger ~See([ENEMY], FALSE)~: Parsing.Parse_error
+  Compiling 1 dialogue file ...
+
+  [trigger list near line 57, column 35 of los/dlg/f#susu.d] PARSE WARNING at line
+57 column 1-19
+  Near Text: )
+  Type mismatch in "SeeDead" argument of [See].
+  Expecting type "integer".
+  WARNING: cannot verify trigger ~See([ENEMY], FALSE)~: Parsing.Parse_error
+#+END_EXAMPLE
+
+If you don't care about these errors or know how to fix them, just uncomment the light_of_selune lines in plays/iwd2mia.yaml and the Makefile and type "make light_of_selune" to install it.

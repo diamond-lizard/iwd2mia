@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: f0e05f168418d4c228e66f636cd03dd97e937b0ea32526b1b01143108c0e89b7
+iwd2_mod_archive_file_path: "{{ role_path }}/files/celestial-fury.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-B0SW1H51.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-B0SW1H51.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/celestial-fury"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-B0SW1H51.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/B0SW1H51"
+  - "{{ iwd2_path }}/SETUP-B0SW1H51.DEBUG"
+  - "{{ iwd2_path }}/setup-B0SW1H51.exe"
+  - "{{ iwd2_path }}/setup-B0SW1H51.tp2"
+  - "{{ iwd2_path }}/README-B0SW1H51.txt"

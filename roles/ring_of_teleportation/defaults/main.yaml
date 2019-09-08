@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 1a1a66584dbcb6d30f176d7abced5ab8e0e2daa8c36036fca0a2f0874e803da8
+iwd2_mod_archive_file_path: "{{ role_path }}/files/ring-of-teleportation.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBRNGTEL.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBRNGTEL.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/ring-of-teleportation"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBRNGTEL.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBRNGTEL"
+  - "{{ iwd2_path }}/SETUP-BBRNGTEL.DEBUG"
+  - "{{ iwd2_path }}/setup-BBRNGTEL.exe"
+  - "{{ iwd2_path }}/setup-BBRNGTEL.tp2"
+  - "{{ iwd2_path }}/README-BBRNGTEL.txt"

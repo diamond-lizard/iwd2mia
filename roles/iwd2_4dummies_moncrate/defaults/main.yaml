@@ -1,0 +1,3 @@
+iwd2_file_dest: "{{ iwd2_override_path }}"
+iwd2_file_sha256: 9025f96161c76ff801fa47124efc9dc84494ec3fbf6983acbc040985eb5fa1ab
+iwd2_file_path: "{{ role_path }}/files/MONCRATE.2DA"

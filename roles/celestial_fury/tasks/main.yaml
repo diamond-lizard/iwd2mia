@@ -1,0 +1,57 @@
+---
+- name: Mod archive exists
+  stat:
+    path: "{{ iwd2_mod_archive_file_path }}"
+    checksum_algorithm: sha256
+  register: iwd2_mod_archive_file
+  failed_when: iwd2_mod_archive_file.stat.exists == False
+
+- name: Mod archive checksum matches
+  assert:
+    that: iwd2_mod_archive_file.stat.checksum == iwd2_mod_archive_sha256
+
+- name: Mod archive extracted
+  unarchive:
+    src: "{{ iwd2_mod_archive_file_path }}"
+    dest: "{{ iwd2_mod_dest }}"
+    copy: False
+
+- name: Mod installer ran
+  command: wine "{{ iwd2_weidu_installer }}" --language 0 --yes
+  args:
+    chdir: "{{ iwd2_mod_dest }}"
+
+- name: mod-readme directory exists
+  file:
+    dest: "{{ iwd2_mod_readme_dir }}"
+    mode: 0755
+    state: directory
+
+- name: Destination subdirectory in mod-readme directory exists
+  file:
+    dest: "{{ iwd2_mod_readme_subdir }}"
+    mode: 0755
+    state: directory
+
+- name: mod's readme files are in mod-readme destination subdirectory
+  copy:
+    src: "{{ item }}"
+    dest: "{{ iwd2_mod_readme_subdir }}"
+  loop: "{{ iwd2_mod_readme_files }}"
+
+- name: mod-debug output directory exists
+  file:
+    dest: "{{ iwd2_mod_debug_output_dir }}"
+    mode: 0755
+    state: directory
+
+- name: mod's debug file is in mod-debug output directory
+  copy:
+    src: "{{ iwd2_mod_debug_file }}"
+    dest: "{{ iwd2_mod_debug_output_dir }}"
+
+- name: Cleaned up
+  file:
+    path: "{{ item }}"
+    state: absent
+  loop: "{{ iwd2_mod_cleanup_paths }}"

@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: e0a0ce30908ba4db23a9e16bf6615dc5fa39fdd47644bebaa0f0d8d15f5e0d4f
+iwd2_mod_archive_file_path: "{{ role_path }}/files/hellfire-sword.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBSHLFR.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBSHLFR.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/hellfire-sword"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBSHLFR.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBSHLFR"
+  - "{{ iwd2_path }}/SETUP-BBSHLFR.DEBUG"
+  - "{{ iwd2_path }}/setup-BBSHLFR.exe"
+  - "{{ iwd2_path }}/setup-BBSHLFR.tp2"
+  - "{{ iwd2_path }}/README-BBSHLFR.txt"

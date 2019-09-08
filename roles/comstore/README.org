@@ -1,0 +1,4 @@
+* Comstore
+This ansible role installs the [[http://america.iegmc.com/russian/IWD2_mods/CoMstore210.7z][Comstore]] mod for Icewind Dale 2.
+
+In order to do so it will run version 246 of the Windows WEIDU installer.

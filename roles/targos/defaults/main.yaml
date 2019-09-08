@@ -1,0 +1,15 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 91a04538b3240fa4e20a16ed4225b27f103f9a27e85de917088fd3ad261b23f6
+iwd2_mod_archive_file_path: "{{ role_path }}/files/weimer-targos.tar.xz"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/Setup-Targos.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/targos/README-Targos.txt"
+  - "{{ iwd2_path }}/targos/HINTS-Targos.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/targos"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-TARGOS.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/targos"
+  - "{{ iwd2_path }}/SETUP-TARGOS.DEBUG"
+  - "{{ iwd2_path }}/Setup-Targos.exe"
+  - "{{ iwd2_path }}/Setup-Targos.tp2"
+  - "{{ iwd2_path }}/SETUP-DDRAWFIX.DEBUG"

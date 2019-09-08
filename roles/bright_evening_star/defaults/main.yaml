@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 74769cf7431c9fcd24ab3662452ff9af0ec293ec5642d59d22815ab2af476240
+iwd2_mod_archive_file_path: "{{ role_path }}/files/bright-evening-star.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBRNGEST.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBRNGEST.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/bright-evening-star"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBRNGEST.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBRNGEST"
+  - "{{ iwd2_path }}/SETUP-BBRNGEST.DEBUG"
+  - "{{ iwd2_path }}/setup-BBRNGEST.exe"
+  - "{{ iwd2_path }}/setup-BBRNGEST.tp2"
+  - "{{ iwd2_path }}/README-BBRNGEST.txt"

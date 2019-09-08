@@ -1,0 +1,43 @@
+---
+- name: Extended Tables 40 zip file exists
+  stat:
+    path: "{{ iwd2_extended_tables_40_zip_file_path }}"
+    checksum_algorithm: sha256
+  register: iwd2_extended_tables_40_zip_file
+  failed_when: iwd2_extended_tables_40_zip_file.stat.exists == False
+
+- name: Extended Tables 40 zip file's checksum is as expected
+  assert:
+    that: iwd2_extended_tables_40_zip_file.stat.checksum == iwd2_extended_tables_40_zip_sha256
+
+- name: Extended Tables 40 zip file extracted
+  unarchive:
+    src: "{{ iwd2_extended_tables_40_zip_file_path }}"
+    dest: "{{ iwd2_extended_tables_40_dest }}"
+    copy: False
+    exclude: "{{ iwd2_extended_tables_40_exclusions }}"
+
+- name: Checksums of extracted files are as expected
+  command: sha256sum --check --quiet "{{ iwd2_extended_tables_40_extracted_files_checksums_path }}"
+  args:
+    chdir: "{{ iwd2_extended_tables_40_dest }}"
+  register: iwd2_extended_tables_40_extracted_files_checksums
+  changed_when: False
+  failed_when: iwd2_extended_tables_40_extracted_files_checksums.stdout != ''
+
+- name: Verified mod-readme directory exists
+  file:
+    dest: "{{ iwd2_mod_readme_dir }}"
+    mode: 0755
+    state: directory
+
+- name: Verified destination subdirectory in mod-readme directory exists
+  file:
+    dest: "{{ iwd2_extended_tables_40_readme_dir }}"
+    mode: 0755
+    state: directory
+
+- name: Copied mod's readme file to mod-readme directory
+  copy:
+    src: "{{ iwd2_extended_tables_40_readme_file }}"
+    dest: "{{ iwd2_extended_tables_40_readme_dir }}"

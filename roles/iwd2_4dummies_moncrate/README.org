@@ -1,0 +1,13 @@
+* IWD2-4dummies moncrate
+This ansible playbook installs MONCRATE.2DA from [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/IWD2-4dummies.zip][IWD2_4dummies]] for Icewind Dale 2.
+
+Here is what [[https://sorcerers.net/community/threads/a-comprehensive-link-list-of-all-iwd2-mods.46611/][A comprehensive link-list of ALL IWD2 mods]] has to say about it:
+
+        [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/Moncrate.zip][Double XP in Insane Mode]]
+        [[http://www.sorcerers.net/Games/IWD2/tweaked_xp_tables.php][Tweaked Experience Tables]]
+        these alter moncrate.2da, you can do this by hand, to suit
+        your style. Download my guide below, it also contains a
+        modified moncrate.2da file so you have a level 40 experience
+        table, AND always get some XP for kills. None of the other
+        tables does both. Drop it in Override folder AFTER Level 40
+        Extended Tables.

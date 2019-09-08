@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 13fe94c00fb8f74d60f63e00e4810c01405e3b0bf7291faebaa6785e42fc647d
+iwd2_mod_archive_file_path: "{{ role_path }}/files/staff-of-the-archmagi.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBSTAF11.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBSTAF11.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/staff-of-the-archmagi"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBSTAF11.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBSTAF11"
+  - "{{ iwd2_path }}/SETUP-BBSTAF11.DEBUG"
+  - "{{ iwd2_path }}/setup-BBSTAF11.exe"
+  - "{{ iwd2_path }}/setup-BBSTAF11.tp2"
+  - "{{ iwd2_path }}/README-BBSTAF11.txt"

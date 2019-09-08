@@ -1,0 +1,9 @@
+iwd2_extended_tables_40_dest: "{{ iwd2_override_path }}"
+iwd2_extended_tables_40_exclusions:
+  - "Read Me.txt"
+  - "!sorcerers.txt"
+iwd2_extended_tables_40_zip_sha256: dc02f35f6911427d263c73b0b8068d840468ffbea19ca8064db8ffbacf5c5dad
+iwd2_extended_tables_40_zip_file_path: "{{ role_path }}/files/ExtendedTables40.zip"
+iwd2_extended_tables_40_extracted_files_checksums_path: "{{ role_path }}/files/extracted_files_checksums.sha256"
+iwd2_extended_tables_40_readme_file: "{{ role_path }}/files/Read Me.txt"
+iwd2_extended_tables_40_readme_dir: "{{ iwd2_mod_readme_dir }}/extended-tables-40"

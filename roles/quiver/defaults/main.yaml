@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: afbb7b68c28605506db782d63478dce0b874cfaec76635eb3842f05e1b6385ac
+iwd2_mod_archive_file_path: "{{ role_path }}/files/quiver.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBQUIV.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBQUIV.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/quiver"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBQUIV.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBQUIV"
+  - "{{ iwd2_path }}/SETUP-BBQUIV.DEBUG"
+  - "{{ iwd2_path }}/setup-BBQUIV.exe"
+  - "{{ iwd2_path }}/setup-BBQUIV.tp2"
+  - "{{ iwd2_path }}/README-BBQUIV.txt"

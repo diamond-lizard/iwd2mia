@@ -1,0 +1,6 @@
+* ddwrapper
+This ansible role installs the [[http://bitpatch.com/ddwrapper.html][ddwrapper]] fix for Icewind Dale 2.
+
+For more information on why it may be needed, see:
+
+ [[https://www.gog.com/forum/icewind_dale_series/windows_81_directdraw_solution_for_iwd2][Windows 8.1 DirectDraw Solution for IWD2, page 1 - Forum - GOG.com]]

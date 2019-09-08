@@ -1,0 +1,12 @@
+localhost ansible_connection=local
+
+# vim: ft=conf
+
+# *** Force emacs to recognize this file ***
+#
+# For more info, see the section
+#   "Specifying File Variables" in the emacs manual.
+#
+# Local Variables:
+# mode: conf
+# End:

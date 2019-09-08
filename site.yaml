@@ -1,0 +1,2 @@
+---
+- import_playbook: plays/iwd2mia.yaml

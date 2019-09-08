@@ -1,0 +1,13 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 7b2ca69202fccc8ed02eed7aedb865fcdef38aaf62ec1cfd8aa55797843ecf36
+iwd2_mod_archive_file_path: "{{ role_path }}/files/ease-of-use.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/Setup-IWD2-Ease.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/iwd2-ease/README-IWD2-Ease.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/ease-of-use"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-IWD2-EASE.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/iwd2-ease"
+  - "{{ iwd2_path }}/SETUP-IWD2-EASE.DEBUG"
+  - "{{ iwd2_path }}/Setup-IWD2-Ease.exe"
+  - "{{ iwd2_path }}/Setup-IWD2-Ease.tp2"

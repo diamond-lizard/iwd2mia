@@ -1,0 +1,66 @@
+---
+- name: iwd2.exe exists
+  stat:
+    path: "{{ iwd2_exe_path }}"
+    checksum_algorithm: sha256
+  register: iwd2_exe_original_stat
+  failed_when: iwd2_exe_original_stat.stat.exists == False
+
+- name: iwd2.exe has expected checksum
+  assert:
+    that: iwd2_exe_original_stat.stat.checksum == iwd2_exe_original_sha256
+
+- name: xpcapper patch exists
+  stat:
+    path: "{{ iwd2_exe_xpcapper_bspatch }}"
+    checksum_algorithm: sha256
+  register: xpcapper_patch_stat
+  failed_when: xpcapper_patch_stat.stat.exists == False
+
+- name: xpcapper patch has expected checksum
+  assert:
+    that: xpcapper_patch_stat.stat.checksum == iwd2_exe_xpcapper_bspatch_sha256
+
+- name: Empty backup location for iwd2.exe created
+  command: mktemp "{{ iwd2_exe_path}}.backup.XXXXX"
+  args:
+    creates: iwd2_exe_backup
+  register: iwd2_exe_backup
+  when: iwd2_exe_original_stat.stat.checksum == iwd2_exe_original_sha256
+
+- name: Moved iwd2.exe to backup location
+  command: mv "{{ iwd2_exe_path }}" "{{ iwd2_exe_backup.stdout }}"
+  args:
+    removes: "{{ iwd2_exe_path }}"
+  when: iwd2_exe_backup
+
+- name: Applied xpcapper patch to iwd2.exe
+  bspatch:
+    oldfile: "{{ iwd2_exe_backup.stdout }}"
+    newfile: "{{ iwd2_exe_path }}"
+    patchfile: "{{ iwd2_exe_xpcapper_bspatch }}"
+  when: iwd2_exe_backup
+
+- name: Verified iwd2.exe has been patched with xpcapper
+  stat:
+    path: "{{ iwd2_exe_path }}"
+    checksum_algorithm: sha256
+  register: iwd2_exe_new_stat
+  failed_when: ( iwd2_exe_new_stat.stat.exists == False ) or ( iwd2_exe_new_stat.stat.checksum != iwd2_exe_after_xpcapper_patch_sha256 )
+
+- name: Verified mod-readme directory exists
+  file:
+    dest: "{{ iwd2_mod_readme_dir }}"
+    mode: 0755
+    state: directory
+
+- name: Verified mod-readme/xpcapper directory exists
+  file:
+    dest: "{{ iwd2_xpcapper_readme_dir }}"
+    mode: 0755
+    state: directory
+
+- name: Copied xpcapper's readme file to mod-readme directory
+  copy:
+    src: "{{ iwd2_xpcapper_readme_file }}"
+    dest: "{{ iwd2_xpcapper_readme_dir }}"

@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 0463ecbaa915d440c09510d83a0ec37a71e2527ce9afc1f8d6695d98bc0234e5
+iwd2_mod_archive_file_path: "{{ role_path }}/files/scimitar-of-the-arch-druid.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBSCARDR.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBSCARDR.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/scimitar-of-the-arch-druid"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBSCARDR.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBSCARDR"
+  - "{{ iwd2_path }}/SETUP-BBSCARDR.DEBUG"
+  - "{{ iwd2_path }}/setup-BBSCARDR.exe"
+  - "{{ iwd2_path }}/setup-BBSCARDR.tp2"
+  - "{{ iwd2_path }}/README-BBSCARDR.txt"

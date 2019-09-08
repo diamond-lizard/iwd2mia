@@ -1,0 +1,10 @@
+Tables extended to lvl 40                         Author : TheMightySor
+                                                      TheMightySor@hotmail.com
+This mod does nothing by itself,it is only useful in conjunction with Avenger's xpcapper mod.
+It extends the tables in several 2da files to lvl 40 allowing you to take advantage of Avenger's  mod and lvl to 40.
+
+please note that I simply extended the tables trying to use the progression already there
+so it most likely doesnt conform to 3e rules
+
+INSTALLATION
+extract the 2da files in the zip archive to your IWD2 override folder

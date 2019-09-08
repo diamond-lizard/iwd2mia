@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 04ca6a32eacc95c441b2d81aa64e49a743acca3696fc65418bc24ed30f1c05c8
+iwd2_mod_archive_file_path: "{{ role_path }}/files/crate-of-planar-rest.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBCRPL.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBCRPL.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/crate-of-planar-rest"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBCRPL.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBCRPL"
+  - "{{ iwd2_path }}/SETUP-BBCRPL.DEBUG"
+  - "{{ iwd2_path }}/setup-BBCRPL.exe"
+  - "{{ iwd2_path }}/setup-BBCRPL.tp2"
+  - "{{ iwd2_path }}/README-BBCRPL.txt"

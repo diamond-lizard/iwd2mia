@@ -1,0 +1,4 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_readme_files:
+  - "{{ role_path }}/files/README.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/gui-fix"

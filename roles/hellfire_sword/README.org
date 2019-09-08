@@ -1,0 +1,6 @@
+* Hellfire Sword
+This ansible role installs the Hellfire Sword (BBSHLFR) mod for Icewind Dale 2.
+
+In order to do so it will run version 246 of the Windows WEIDU installer.
+
+The mod was found [[https://drive.google.com/folderview?id=0B0yWOHhOwN6WcC1kTTJmQlcxc1U&usp=sharing&tid=0B0yWOHhOwN6WcFZVMWV6eUFyUEk][here]].  For more information about that distribution see [[https://bbellina.blogspot.com/2014/06/icewind-dale-ii-enhancements.html][Icewind Dale II Enhancements (Tilting at Pixelated Windmills)]]

@@ -1,0 +1,3 @@
+iwd2_file_dest: "{{ iwd2_override_path }}"
+iwd2_file_sha256: 5664ad90fda85df800eb1a104fc77d99cd6f0e036e51b60839023bfa8a36c20f
+iwd2_file_path: "{{ role_path }}/files/65MAXHP.BCS"

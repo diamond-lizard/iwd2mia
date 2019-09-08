@@ -1,0 +1,4 @@
+* Bonus Merchant
+This ansible role installs the [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/Weimer-Merchant.rar][Bonus Merchant]] mod for Icewind Dale 2.
+
+In order to do so it will run version 246 of the Windows WEIDU installer.

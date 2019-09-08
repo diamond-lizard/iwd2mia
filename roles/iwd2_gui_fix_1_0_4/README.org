@@ -1,0 +1,2 @@
+* IWD2 GUI Fix v.1.04
+This ansible role installs the [[http://havredest.eklablog.fr/interfaces-pour-widescreen-a42876917][IWD2 GUI Fix v.1.04]] mod for Icewind Dale 2.  This is an updated version of the IWD2 widescreen mod.

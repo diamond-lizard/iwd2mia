@@ -1,0 +1,28 @@
+---
+- name: Mod's chu files are in IWD2's Override directory
+  copy:
+    src: "{{ role_path }}/files/chu/{{ horizontal_resolution }}x{{ vertical_resolution }}/"
+    dest: "{{ iwd2_override_path }}"
+
+- name: Mod's mos files are in IWD2's Override directory
+  copy:
+    src: "{{ role_path }}/files/mos/{{ horizontal_resolution }}/"
+    dest: "{{ iwd2_override_path }}"
+
+- name: mod-readme directory exists
+  file:
+    dest: "{{ iwd2_mod_readme_dir }}"
+    mode: 0755
+    state: directory
+
+- name: Destination subdirectory in mod-readme directory exists
+  file:
+    dest: "{{ iwd2_mod_readme_subdir }}"
+    mode: 0755
+    state: directory
+
+- name: mod's readme files are in mod-readme destination subdirectory
+  copy:
+    src: "{{ item }}"
+    dest: "{{ iwd2_mod_readme_subdir }}"
+  loop: "{{ iwd2_mod_readme_files }}"

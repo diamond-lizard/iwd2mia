@@ -1,0 +1,30 @@
+# #######################################################################
+#
+# Start of user-configurable section
+#
+# ----------------------------------
+#
+# The directory where Icewind Dale 2 is installed:
+#
+iwd2_path_unexpanded: ~/.wine/drive_c/games/iwd2
+#
+# Choose your resolution from one of these:
+#
+#   1280x1024  1280x720  1280x800  1280x960  1360x768
+#   1440x900  1600x1200  1600x900  1680x1050  1920x1080  1920x1200
+#
+horizontal_resolution: 1920
+vertical_resolution: 1080
+#
+# --------------------------------
+#
+# End of user-configurable section
+#
+# #######################################################################
+#
+# The "| expanduser" filter below is just a little hack used to change ~ to /home/whatever
+iwd2_path: "{{ iwd2_path_unexpanded | expanduser }}"
+iwd2_exe_path: "{{ iwd2_path }}/IWD2.exe"
+iwd2_override_path: "{{ iwd2_path }}/Override"
+iwd2_mod_debug_output_dir: "{{ iwd2_path }}/mod-debug-output"
+iwd2_mod_readme_dir: "{{ iwd2_path }}/mod-readme"

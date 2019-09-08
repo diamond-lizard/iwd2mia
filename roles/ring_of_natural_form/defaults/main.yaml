@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 4b4b74e20146f9da357e1d0bd381c200232d7759bab6c7b6147c6efc54990f62
+iwd2_mod_archive_file_path: "{{ role_path }}/files/ring-of-natural-form.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBRNGNF.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBRNGNF.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/ring-of-natural-form"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBRNGNF.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBRNGNF"
+  - "{{ iwd2_path }}/SETUP-BBRNGNF.DEBUG"
+  - "{{ iwd2_path }}/setup-BBRNGNF.exe"
+  - "{{ iwd2_path }}/setup-BBRNGNF.tp2"
+  - "{{ iwd2_path }}/README-BBRNGNF.txt"

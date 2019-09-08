@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: cb4bce9f63cc06ed365d5f1e3cad66b0fd69e007ca139aa55dc0621caf139a26
+iwd2_mod_archive_file_path: "{{ role_path }}/files/rope-of-entanglement.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBRPENT.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBRPENT.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/rope-of-entanglement"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBRPENT.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBRPENT"
+  - "{{ iwd2_path }}/SETUP-BBRPENT.DEBUG"
+  - "{{ iwd2_path }}/setup-BBRPENT.exe"
+  - "{{ iwd2_path }}/setup-BBRPENT.tp2"
+  - "{{ iwd2_path }}/README-BBRPENT.txt"

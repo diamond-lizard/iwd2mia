@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: aed935842e7c0f75ef164d12bce2f98c7383da85b7a88959a755642c29161f3b
+iwd2_mod_archive_file_path: "{{ role_path }}/files/helm-of-brilliance.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBHLMBR.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBHLMBR.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/helm-of-brilliance"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBHLMBR.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBHLMBR"
+  - "{{ iwd2_path }}/SETUP-BBHLMBR.DEBUG"
+  - "{{ iwd2_path }}/setup-BBHLMBR.exe"
+  - "{{ iwd2_path }}/setup-BBHLMBR.tp2"
+  - "{{ iwd2_path }}/README-BBHLMBR.txt"

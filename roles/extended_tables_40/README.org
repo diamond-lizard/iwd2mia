@@ -1,0 +1,2 @@
+* Level 40 extended tables
+This ansible role installs the [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/ExtendedTables40.zip][Level 40 extended tables]] mod for Icewind Dale 2

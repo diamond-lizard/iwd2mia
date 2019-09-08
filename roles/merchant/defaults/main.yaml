@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 51a36eccfd4eb672b670942283239cb87a02c29b4c6982789f81ab9835e5f6fa
+iwd2_mod_archive_file_path: "{{ role_path }}/files/weimer-merchant.tar.xz"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/Setup-Merchant.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/merchant/README-Merchant.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/merchant"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-MERCHANT.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/merchant"
+  - "{{ iwd2_path }}/SETUP-MERCHANT.DEBUG"
+  - "{{ iwd2_path }}/Setup-Merchant.exe"
+  - "{{ iwd2_path }}/Setup-Merchant.tp2"
+  - "{{ iwd2_path }}/SETUP-DDRAWFIX.DEBUG"

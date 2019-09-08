@@ -1,0 +1,39 @@
+---
+- hosts: localhost
+  any_errors_fatal: true
+  gather_facts: false
+  roles:
+    - xpcapper
+    - extended_tables_40
+    - iwd2_4dummies_moncrate
+    - targos
+    - merchant
+    - celestial_fury
+    - book_bag
+    - cloak_of_blending
+    - crate_of_planar_rest
+    - claw_of_meerclar
+    - helm_of_brilliance
+    - helm_of_dragon_scales
+    - pocket_transmuter
+    - quiver
+    - bolt_quiver
+    - ammunition_belt
+    - bright_evening_star
+    - ring_of_natural_form
+    - ring_of_over_compensation
+    - ring_of_teleportation
+    - rope_of_entanglement
+    - scimitar_of_the_arch_druid
+    - hellfire_sword
+    - staff_of_the_archmagi
+    - celestial_storm
+    - needle
+    - ammo_belts_and_bottomless_bags
+    - comstore
+#    - light of selune
+    - ease_of_use
+    - tactics
+    - iwd2_4dummies_65maxhp
+    - iwd2_gui_fix_1_0_4
+    - ddwrapper

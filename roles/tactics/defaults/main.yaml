@@ -1,0 +1,13 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: f320c72923f7e129f488ddd76155c02aae99cc592af42b455892f1c028902233
+iwd2_mod_archive_file_path: "{{ role_path }}/files/tactics.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/Setup-Tactics4IWD2.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/Tactics4IWD2/Readme_EN.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/tactics"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-TACTICS4IWD2.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/Tactics4IWD2"
+  - "{{ iwd2_path }}/SETUP-TACTICS4IWD2.DEBUG"
+  - "{{ iwd2_path }}/Setup-Tactics4IWD2.exe"
+  - "{{ iwd2_path }}/Setup-Tactics4IWD2.tp2"

@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: b0bff109789845f6d1439a7feaeffebf287b04eec20691ce693e13ee4928d141
+iwd2_mod_archive_file_path: "{{ role_path }}/files/cloak-of-blending.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBCLKBL.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBCLKBL.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/cloak-of-blending"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBCLKBL.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBCLKBL"
+  - "{{ iwd2_path }}/SETUP-BBCLKBL.DEBUG"
+  - "{{ iwd2_path }}/setup-BBCLKBL.exe"
+  - "{{ iwd2_path }}/setup-BBCLKBL.tp2"
+  - "{{ iwd2_path }}/README-BBCLKBL.txt"

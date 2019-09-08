@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: b90284129547508334095e04832bcce8cfc411c70bd77a0d0229ae3bd8c8c8c5
+iwd2_mod_archive_file_path: "{{ role_path }}/files/needle.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBSW1NDL.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBSW1NDL.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/needle"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBSW1NDL.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBSW1NDL"
+  - "{{ iwd2_path }}/SETUP-BBSW1NDL.DEBUG"
+  - "{{ iwd2_path }}/setup-BBSW1NDL.exe"
+  - "{{ iwd2_path }}/setup-BBSW1NDL.tp2"
+  - "{{ iwd2_path }}/README-BBSW1NDL.txt"

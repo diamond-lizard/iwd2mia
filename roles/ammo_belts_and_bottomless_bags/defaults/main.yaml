@@ -1,0 +1,13 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 7cb2df3204caf7c25d6e8544731fe1e76e910a7b50f37135a12d8d0d56ca7468
+iwd2_mod_archive_file_path: "{{ role_path }}/files/ammo-belts-and-bottomless-bags.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/Setup-IWD2-ammo-v1.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/IWD2-ammo-v1/Readme-IWD2-ammo-v1.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/ammo-belts-and-bottomless-bags"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-IWD2-AMMO-V1.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/IWD2-ammo-v1"
+  - "{{ iwd2_path }}/SETUP-IWD2-AMMO-V1.DEBUG"
+  - "{{ iwd2_path }}/Setup-IWD2-ammo-v1.exe"
+  - "{{ iwd2_path }}/Setup-IWD2-ammo-v1.tp2"

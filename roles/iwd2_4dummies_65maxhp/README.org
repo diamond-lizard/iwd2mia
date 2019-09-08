@@ -1,0 +1,8 @@
+* IWD2-4dummies 65maxhp
+This ansible playbook installs 65MAXHP.BCS from [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/IWD2-4dummies.zip][IWD2_4dummies]] for Icewind Dale 2.
+
+Here is what [[https://sorcerers.net/community/threads/a-comprehensive-link-list-of-all-iwd2-mods.46611/][A comprehensive link-list of ALL IWD2 mods]] has to say about it:
+
+  To avoid the alignment change after a certain mission in
+  Tactics4IWD2 (CharCreaTips spoiler 22 explains), drop 65MAXHP.BCS
+  into Override.

@@ -1,0 +1,28 @@
+---
+- name: ddraw.dll exists
+  stat:
+    path: "{{ iwd2_ddraw_path }}"
+    checksum_algorithm: sha256
+  register: iwd2_ddraw
+  failed_when: iwd2_ddraw.stat.exists == False
+
+- name: ddraw.dll's checksum is as expected
+  assert:
+    that: iwd2_ddraw.stat.checksum == iwd2_ddraw_sha256
+
+- name: ddraw.dll copied to destination
+  copy:
+    src: "{{ iwd2_ddraw_path }}"
+    dest: "{{ iwd2_dest }}"
+
+- name: aqrit.cfg exists
+  stat:
+    path: "{{ iwd2_aqrit_path }}"
+    checksum_algorithm: sha256
+  register: iwd2_aqrit
+  failed_when: iwd2_aqrit.stat.exists == False
+
+- name: aqrit.cfg copied to destination
+  copy:
+    src: "{{ iwd2_aqrit_path }}"
+    dest: "{{ iwd2_dest }}"

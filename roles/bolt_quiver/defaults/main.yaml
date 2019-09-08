@@ -1,0 +1,14 @@
+iwd2_mod_dest: "{{ iwd2_path }}"
+iwd2_mod_archive_sha256: 14ef22930c99537c97e85d631ab7b9794520246464c70e1cd573e09396e119dc
+iwd2_mod_archive_file_path: "{{ role_path }}/files/bolt-quiver.tar"
+iwd2_weidu_installer: "{{ iwd2_mod_dest }}/setup-BBQUIVB.exe"
+iwd2_mod_readme_files:
+  - "{{ iwd2_path }}/README-BBQUIVB.txt"
+iwd2_mod_readme_subdir: "{{ iwd2_mod_readme_dir }}/bolt-quiver"
+iwd2_mod_debug_file: "{{ iwd2_path }}/SETUP-BBQUIVB.DEBUG"
+iwd2_mod_cleanup_paths:
+  - "{{ iwd2_path }}/BBQUIVB"
+  - "{{ iwd2_path }}/SETUP-BBQUIVB.DEBUG"
+  - "{{ iwd2_path }}/setup-BBQUIVB.exe"
+  - "{{ iwd2_path }}/setup-BBQUIVB.tp2"
+  - "{{ iwd2_path }}/README-BBQUIVB.txt"
