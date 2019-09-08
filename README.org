@@ -47,7 +47,7 @@ See the Instructions section below.
 Because IWD2_4dummies brands it as being for "expert-only due to the amount of effort you must perform in order to get exactly what you want out of this one".
 **** [[http://america.iegmc.com/russian/IWD2_mods/CoMstore210.7z][Comstore]]
 **** [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/LightOfSelune.zip][Light of Selune]] is included but NOT installed
-Due to parser errors (see below)
+Due to parser errors (see [[https://github.com/diamond-lizard/iwd2mia/issues/1][issue 1]])
 **** The following components of the [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/Weimer-IWD2-Ease.rar][Ease of Use]] mod:
 ***** 0 // Bugfixes
 ***** 1 // Infinite Stacking
@@ -116,27 +116,6 @@ inventory = ~/foo/inventory
 **** Change iwd2_path_unexpanded to whatever directory you have IWD2 installed in
 **** Change horizontal_resolution and vertical_resolution to whatever resolution you want to play IWD2 at
 *** Type "make install"
-** Parser errors in Light of Selune
-The [[http://www.sorcerers.net/Games/dl.php?s=IWD2&f=IWD2/LightOfSelune.zip][Light of Selune]] mod is included but NOT installed due to the following parser errors that WEIDU 246 reports:
-
-#+BEGIN_EXAMPLE
-  [trigger list near line 572, column 35 of los/dlg/f#bowyer.d] PARSE WARNING at
-line 572 column 1-19
-  Near Text: )
-  Type mismatch in "SeeDead" argument of [See].
-  Expecting type "integer".
-  WARNING: cannot verify trigger ~See([ENEMY], FALSE)~: Parsing.Parse_error
-  Compiling 1 dialogue file ...
-
-  [trigger list near line 57, column 35 of los/dlg/f#susu.d] PARSE WARNING at line
-57 column 1-19
-  Near Text: )
-  Type mismatch in "SeeDead" argument of [See].
-  Expecting type "integer".
-  WARNING: cannot verify trigger ~See([ENEMY], FALSE)~: Parsing.Parse_error
-#+END_EXAMPLE
-
-If you don't care about these errors or know how to fix them, just uncomment the light_of_selune lines in plays/iwd2mia.yaml and the Makefile and type "make light_of_selune" to install it.
 ** License
 
 All of the Ansible code in this repo is distributed under the AGPL (see below).  The mods themselves are distributed under their own licenses.
