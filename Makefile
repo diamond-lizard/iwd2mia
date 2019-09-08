@@ -1,7 +1,42 @@
-.PHONY: site
 .PHONY: extended-tables
+.PHONY: ammo_belts_and_bottomless_bags
+.PHONY: ammunition_belt
+.PHONY: bolt_quiver
+.PHONY: book_bag
+.PHONY: bright_evening_star
+.PHONY: celestial_fury
+.PHONY: celestial_storm
+.PHONY: claw_of_meerclar
+.PHONY: cloak_of_blending
+.PHONY: comstore
+.PHONY: crate_of_planar_rest
+.PHONY: ddwrapper
+.PHONY: ease_of_use
+.PHONY: extended_tables_40
+.PHONY: hellfire_sword
+.PHONY: helm_of_dragon_scales
+.PHONY: helm_of_brilliance
+.PHONY: install
+.PHONY: iwd2_4dummies_65maxhp
+.PHONY: iwd2_4dummies_moncrate
+.PHONY: iwd2_gui_fix_1_0_4
+.PHONY: light_of_selune
+.PHONY: merchant
+.PHONY: needle
+.PHONY: pocket_transmuter
+.PHONY: quiver
+.PHONY: ring_of_natural_form
+.PHONY: ring_of_over_compensation
+.PHONY: ring_of_teleportation
+.PHONY: rope_of_entanglement
+.PHONY: scimitar_of_the_arch_druid
+.PHONY: site
+.PHONY: staff_of_the_archmagi
+.PHONY: tactics
+.PHONY: targos
+.PHONY: xpcapper
 
-all: site
+all:
 
 ammo_belts_and_bottomless_bags:
 	ansible-playbook plays/ad-hoc-role-launcher.yaml -e 'role=ammo_belts_and_bottomless_bags'
@@ -53,6 +88,8 @@ helm_of_dragon_scales:
 
 helm_of_brilliance:
 	ansible-playbook plays/ad-hoc-role-launcher.yaml -e 'role=helm_of_brilliance'
+
+install: site
 
 iwd2_4dummies_65maxhp:
 	ansible-playbook plays/ad-hoc-role-launcher.yaml -e 'role=iwd2_4dummies_65maxhp'
